@@ -1,0 +1,14 @@
+<%= form_for ([@city, @city.posts]) do |t| %>
+  <p>
+    <%= t.label :title %>
+    <%= t.text_tield :title %>
+  </p>
+  <p>
+    <%= t.label :body %>
+    <%= t.text_area :body %>
+  </p>
+  <p>
+    <%= t.submit %>
+  </p>
+
+<% end %>
