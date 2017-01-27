@@ -1,3 +1,12 @@
-<p><%= @city.city_name %></p>
+<h1>Welcome to <%= @city.city_name %>!</h1>
 <p><img src="<%= @city.photo_url %>" width="400px" height="400px"></p>
+
+
+<p><% @city.posts.each do |post| %></p>
+  <h3>Title: <%= post.title %></h3>
+  <p>Post: <%= post.body %></p>
+
+  <% end %>
+
+
 <p><%= link_to 'Home', cities_path %></p>

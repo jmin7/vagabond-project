@@ -9,8 +9,9 @@
 City.destroy_all
 Post.destroy_all
 
-City.create(city_name: "Atlanta", photo_url: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
-City.create(city_name: "Seattle", photo_url: "http://www.bekinsmovingandstorage.com/wp-content/uploads/2016/03/SeattleCity2.jpg")
-City.create(city_name: "London", photo_url:"http://www.universal-tourguide.com/wp-content/uploads/2016/09/discoverlondon.jpg")
-
-Post.create(title: "Cool City", body:"Walk the Beltline!", user_id: 1, city_id: 2 )
+city = City.new(city_name: "Atlanta", photo_url: "http://www.dentons.com/~/media/Images/Website/Background%20Images/Offices/Atlanta/Atlanta_2.jpg")
+# City.create(city_name: "Seattle", photo_url: "http://www.bekinsmovingandstorage.com/wp-content/uploads/2016/03/SeattleCity2.jpg")
+# City.create(city_name: "London", photo_url:"http://www.universal-tourguide.com/wp-content/uploads/2016/09/discoverlondon.jpg")
+city.save
+post= Post.new(title: "Cool City", body:"Walk the Beltline!", user_id: 1, city_id: city.id )
+post.save
