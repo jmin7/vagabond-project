@@ -2,11 +2,9 @@
 <p><img src="<%= @city.photo_url %>" width="400px" height="400px"></p>
 
 
-<p><% @city.posts.each do |post| %></p>
-  <h3>Title: <%= post.title %></h3>
-  <p>Post: <%= post.body %></p>
-
-  <% end %>
+<% @posts.each do |post| %>
+  <a href="/cities/<%= @city.id %>/posts/<%= post.id %>">  <h3>Title: <%= post.title %></h3></a>
+<% end %>
 
 
 <p><%= link_to 'Home', cities_path %></p>
