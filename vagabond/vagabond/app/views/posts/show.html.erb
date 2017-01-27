@@ -1,6 +1,11 @@
   <h1><%= @post.title %></h1>
   <p>Post: <%= @post.body %></p>
 
+<% @post.comments.each do |comment| %>
+<p> <%= comment.body %> </p>
+<% end %>
+
+
 <p><%= link_to 'Edit', edit_city_post_path %></p>
 <p><%= link_to 'Delete', city_post_path(@city),
                          method: :delete,
