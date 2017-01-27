@@ -1,9 +1,4 @@
-<% @post.comments.each do |comment| %>
-<%= comment.body %>
-<% end %>
-<%= @post %>
-
-<%= form_for([@post, @post.comments.build])  do |t| %>
+<%= form_for([@post, @post.comments.build],url: new_city_post_comment_path )  do |t| %>
 
   <p>
     <%= t.label :body %>
@@ -14,3 +9,5 @@
   </p>
 
 <% end %>
+
+

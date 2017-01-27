@@ -2,25 +2,14 @@ class CommentsController < ApplicationController
     def new
         @post = Post.find(params[:post_id])
         @comment = @post.comments.new
-        puts '@post here is #{@post.id}'
 
     end
             
     def create
         @post = Post.find(params[:post_id])
-        @comment = @post.comments.create(params[:body])
-        
-        if @comment.save 
-        redirect_to '/'
-        end
-    end
+        @comment = @post.comments.create(comment_params)
 
-    def show
-
-    end
-
-    def destroy
-
+        redirect_to city_post_path(@post)
     end
 
   private
