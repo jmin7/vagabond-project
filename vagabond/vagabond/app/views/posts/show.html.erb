@@ -1,0 +1,10 @@
+  <h1><%= @post.title %></h1>
+  <p>Post: <%= @post.body %></p>
+
+<p><%= link_to 'Edit', edit_city_post_path %></p>
+<p><%= link_to 'Delete', city_post_path(@city),
+                         method: :delete,
+                         data: { confirm: 'Are you sure?'}
+                        %></p>
+
+<p><%= link_to 'Back', city_path(@city) %></p>
