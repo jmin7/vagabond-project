@@ -1,1 +1,14 @@
-<%= render 'form' %>
+<%= form_for @post, url: {action: "update"} do |t| %>
+  <p>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+  </p>
+  <p>
+    <%= t.label :body %>
+    <%= t.text_area :body %>
+  </p>
+  <p>
+    <%= t.submit %>
+  </p>
+
+<% end %>
