@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
 
+  def new
+    @city = City.find(params[:city_id])
+    @post = @city.posts.new
+  end
+
   def create
     @city = City.find(params[:city_id])
     @post = @city.posts.create(post_params)

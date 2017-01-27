@@ -1,7 +1,7 @@
-<%= form_for ([@city, @city.posts]) do |t| %>
+<%= form_for([@city, @city.posts.build]) do |t| %>
   <p>
     <%= t.label :title %>
-    <%= t.text_tield :title %>
+    <%= t.text_field :title %>
   </p>
   <p>
     <%= t.label :body %>
