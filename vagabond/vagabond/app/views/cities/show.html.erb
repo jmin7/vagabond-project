@@ -1,17 +1,21 @@
+<div class=city_show>
 <h1>Welcome to <%= @city.city_name %>!</h1>
 <p><img src="<%= @city.photo_url %>" width="400px" height="400px"></p>
 
+<div class="city_show_each">
+  <% @posts.each do |post| %>
+    <a href="/cities/<%= @city.id %>/posts/<%= post.id %>">
+      <h3>Title: <%= post.title %></h3></a>
+  <% end %>
+</div>
+</div>
 
-<% @posts.each do |post| %>
-  <a href="/cities/<%= @city.id %>/posts/<%= post.id %>">  <h3>Title: <%= post.title %></h3></a>
-<% end %>
+<div class="city_show_button">
+  <button type="button" class="btn btn-success" type="button">
+       <%= link_to 'Home', cities_path %>
+  </button>
 
-
-
-<button type="button" class="btn btn-success" type="button">
-     <%= link_to 'Home', cities_path %>
-</button>
-
-<button type="button" class="btn btn-success" type="button">
-<%= link_to 'Add New Post', new_city_post_path(@city) %>
-</button>
+  <button type="button" class="btn btn-success" type="button">
+    <%= link_to 'Add New Post', new_city_post_path(@city) %>
+  </button>
+</div>
