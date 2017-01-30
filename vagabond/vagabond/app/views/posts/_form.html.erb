@@ -1,14 +1,17 @@
-<%= form_for([@city, @city.posts.build]) do |t| %>
-  <p>
-    <%= t.label :title %>
-    <%= t.text_field :title %>
-  </p>
-  <p>
-    <%= t.label :body %>
-    <%= t.text_area :body %>
-  </p>
-  <p>
-    <%= t.submit %>
-  </p>
+<div class="post_form">
+  <%= form_for([@city, @city.posts.build]) do |t| %>
+    <p>
+      <%= t.label :title %>
+      <%= t.text_field :title %>
+    </p>
+    <p>
+      <%= t.label :body %>
+      <%= t.text_area :body %>
+    </p>
+    <p>
+      <%= t.submit %>
+    </p>
 
-<% end %>
+  <% end %>
+  <%= link_to 'Home', cities_path%>
+</div>
