@@ -1,15 +1,25 @@
+<div class ="post_show">
   <h1><%= @post.title %></h1>
-  <p>Post: <%= @post.body %></p>
+  <p><h3>Post: <%= @post.body %></h3></p>
 
 <% @post.comments.each do |comment| %>
 <p> <%= comment.body %> </p>
 <% end %>
+</div>
 
+<div class="post_show_button">
+  <button type="button" class="btn btn-success" type="button">
+       <%= link_to 'Edit', edit_city_post_path %>
+  </button>
 
-<p><%= link_to 'Edit', edit_city_post_path %></p>
-<p><%= link_to 'Delete', city_post_path(@city),
-                         method: :delete,
-                         data: { confirm: 'Are you sure?'}
-                        %></p>
+  <button type="button" class="btn btn-success" type="button">
+    <%= link_to 'Delete', city_post_path(@city),
+                          method: :delete,
+                          data: { confirm: 'Are you sure?'}%>
+  </button>
 
-<p><%= link_to 'Back', city_path(@city) %></p>
+  <button type="button" class="btn btn-success" type="button">
+       <%= link_to 'Back', city_path(@city) %>
+  </button>
+
+</div>
