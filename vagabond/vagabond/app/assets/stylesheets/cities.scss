@@ -21,10 +21,16 @@
 }
 
 .city_show {
-  font-family: 'Pangolin', cursive;
+  // font-family: 'Pangolin', cursive;
+  font-family: 'Sansita', sans-serif;
   text-align: center;
+  margin-bottom: 1em;
+  .pic {
+    margin: 4em auto;
+  }
 }
 
 .city_show_button {
   text-align: center;
+  margin-bottom: 5em;
 }
