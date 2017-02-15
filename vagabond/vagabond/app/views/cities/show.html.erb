@@ -1,7 +1,7 @@
 <div class=city_show>
 <h1>Welcome to <%= @city.city_name %>!</h1>
-<p><img src="<%= @city.photo_url %>" width="400px" height="400px"></p>
-
+<p><img src="<%= @city.photo_url %>" width="600px" height="600px"></p>
+<br>
 <div class="city_show_each">
   <% @posts.each do |post| %>
     <a href="/cities/<%= @city.id %>/posts/<%= post.id %>">
