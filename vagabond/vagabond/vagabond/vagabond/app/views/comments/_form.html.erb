@@ -1,0 +1,13 @@
+<%= form_for([@post, @post.comments.build],url: new_city_post_comment_path )  do |t| %>
+
+  <p>
+    <%= t.label :body %>
+    <%= t.text_area :body %>
+  </p>
+  <p>
+    <%= t.submit %>
+  </p>
+
+<% end %>
+
+

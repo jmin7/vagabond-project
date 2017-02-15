@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -23,7 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-=======
-# vagabond-project
-Group Project 3.5 for WDI
->>>>>>> fda4dc120985dc6591468a0f5250de0c0d8cafb7

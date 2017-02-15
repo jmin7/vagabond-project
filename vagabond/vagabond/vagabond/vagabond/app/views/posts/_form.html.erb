@@ -1,0 +1,21 @@
+<body style="background-color: #7cff99">
+
+<div class="post_form">
+  <%= link_to 'Back to the City', city_path(@city)%>
+
+  <%= form_for([@city, @city.posts.build]) do |t| %>
+  <h1>< New Post ></h1><br>
+    <p>
+      <%= t.label :title %>
+      <%= t.text_field :title %>
+    </p>
+    <p>
+      <%= t.label :body %>
+      <%= t.text_area :body %>
+    </p>
+    <p>
+      <%= t.submit %>
+    </p>
+  <% end %>
+</div>
+</body>

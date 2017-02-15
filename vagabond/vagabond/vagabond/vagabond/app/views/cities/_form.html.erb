@@ -1,0 +1,23 @@
+<body style="background-color: #9b7cff">
+
+    <div class="post_form">
+      <%= link_to 'Back to the City List', cities_path%>
+
+        <%= form_for @city do |f| %>
+        <h1>Make a new city
+        </h1><br>
+        <p>
+            <%= f.label :city_name %>
+            <%= f.text_field :city_name %>
+        </p>
+        <p>
+            <%= f.label :photo_url %>
+            <%= f.text_field :photo_url %>
+        </p><br>
+        <p>
+            <%= f.submit %>
+        </p>
+
+        <% end %>
+    </div>
+</body>
